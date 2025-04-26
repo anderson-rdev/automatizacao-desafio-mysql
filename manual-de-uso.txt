@@ -1,0 +1,70 @@
+ 📘 Manual de Uso – Sistema de Avaliação e Bonificação de Funcionários
+
+Este manual fornece instruções detalhadas para implantação e uso das funcionalidades desenvolvidas para o sistema de avaliação de funcionários.
+
+ 1️⃣ View: Funcionários Ativos e Inativos
+
+Objetivo: Exibir o total de funcionários ativos e inativos.
+📝 Explicação: Essa view permite acompanhar a composição do quadro funcional por status.
+
+---
+
+ 2️⃣ Regras de Progressão no Banco
+
+Objetivo: Criar uma tabela que armazene as regras de progressão por grau.
+📝 Explicação: Serve de base para todos os cálculos de progressão.
+
+
+ 3️⃣ Identificação de Grau Atual e Próxima Avaliação
+
+Objetivo: Modificar a tabela `funcionarios` para incluir grau atual e data da próxima avaliação.
+📝 Explicação: Garante que, no momento da implantação, o sistema saiba o estágio de cada funcionário.
+
+---
+
+ 4️⃣ View: Informações de Bônus e Novo Salário
+
+Objetivo: Exibir dados financeiros e progressão dos funcionários ativos.
+📝 Explicação: Mostra a evolução salarial individual com base na bonificação.
+
+
+ 5️⃣ View: Impacto na Folha de Pagamento
+
+Objetivo: Exibir o total da folha com e sem bonificações.
+📝 Explicação: Facilita análises financeiras e planejamento orçamentário.
+
+---
+
+ 6️⃣ Procedure: Funcionários por Ciclo de Avaliação
+
+Objetivo: Listar funcionários que completam 5 anos de avaliação no mês/ano.
+📝 Explicação: Auxilia no planejamento mensal das avaliações.
+
+---
+
+ 7️⃣ Procedure: Avaliação Automática
+
+Objetivo: Avaliar todos os funcionários automaticamente, aplicar regras e registrar resultados.
+
+Etapas principais (resumo):  
+- Verifica faltas e licenças no período.  
+- Compara com limite de 90 dias.  
+- Atualiza grau e salário conforme regras.  
+- Registra avaliação na tabela `avaliacoes_funcionarios`.  
+- Atualiza data da próxima avaliação.
+
+📝 Comentários devem ser inseridos em cada bloco funcional do código.
+
+---
+
+ 8️⃣ Trigger: Prorrogação para Licença Maternidade
+
+Objetivo: Ajustar a data da próxima avaliação automaticamente.
+📝 Explicação: Garante justiça no período avaliado para funcionárias em licença gestante.
+
+ 📌 Observações Finais
+
+- Utilize as views para relatórios e dashboards.
+- As procedures podem ser automatizadas via eventos agendados.
+- Testes devem ser realizados com um banco de dados de homologação.
+
